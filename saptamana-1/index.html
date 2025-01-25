@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- per pagina avem un singur h1. textul din interiorul lui trebuie sa contina o idee strans legata de scopul website-ului si sa contina cuvinte cheie -->
+    <h1>Primul meu websiteeeee</h1>
+    <!-- h2 si h3 folosim pentru titluri de sectiuni -->
+    <h2>Subtitlu.....</h2>
+    <!-- h4, h5 si h6 folosim pentru titluri de sub-sectiuni -->
+
+    <!-- folosim paragraph ( p ) pentru texte non-titluri -->
+    <p>Descriere despre website-ul meu</p>
+
+    <!-- unordered list -->
+    <ul>
+      <!-- list item -->
+      <li>Primul element</li>
+      <li>Al doilea element</li>
+      <li>Al treilea element</li>
+    </ul>
+
+    <!-- ordered list -->
+    <ol>
+      <!-- list item -->
+      <li>Primul element</li>
+      <li>Al doilea element</li>
+      <li>Al treilea element</li>
+    </ol>
+
+    <!-- anchor tag -->
+    <a href="https://code.visualstudio.com/" target="_blank">Descarca VS Code</a>
+    <a href="https://seedblink.com/">Mergi pe alta pagina</a>
+
+    <!-- image - self-closing tag -->
+    <a href="https://picsum.photos/">
+        <img src="https://picsum.photos/200/300"/>
+        <h3>mergi pe lorem picsum</h3>
+    </a>
+
+    <!-- 
+        - href, target, src sunt atribute de HTML 
+        - structura unui atribut este: [nume atribut]="[valoare]"
+        - atributele de HTML modifica anumite aspecte la elementele pe care sunt aplicate
+        - atributele de HTML se pun intotdeauna in tag-ul de deschidere al elementului 
+        - fiecare element de HTML poate primi doar anumite atribute
+        - unele atribute pot avea doar anumite valori
+        - ordinea atributelor nu conteaza deloc. de exemplu, mai sus avem un anchor tag cu atributele href si target. ele pot fi inversate fara sa se modific nimic in comportamentul anchor tag-ului
+    -->
+
+    <form>
+        <label for="name">Your Name</label>
+        <br>
+        <input type="text" id="name" />
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" id="email" />
+        <br>
+        <select>
+            <option>Constructions</option>
+            <option>Beauty & Care</option>
+            <option>IT</option>
+            <option>Marketing</option>
+        </select>
+        <br>
+        <button>Submit</button>
+    </form>
+
+  </body>
+</html>
