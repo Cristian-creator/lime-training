@@ -1,0 +1,47 @@
+/* selector universal */
+/* il folosim ca sa "stergem" toate marginile default */
+* {
+    margin: 0px;
+    font-family: 'Outfit';
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800: hsl(14, 45%, 36%);
+
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+.page-body {
+    background-color: var(--stone-100);
+}
+
+.recipe-card-container {
+    width: 700px;
+    background-color: var(--white);
+    padding: 36px;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-card-image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.recipe-card-title {
+    margin-top: 36px;
+}
+
+.recipe-card-preparation-time {
+    background-color: var(--rose-50);
+}
