@@ -9,7 +9,19 @@ Reguli & Conventii clase:
     /* proprietati de css ( color, background-color, font-size etc ) */
     /* [nume proprietate]: [valoare]; */
     /* unele proprietati permit doar un set anume de valori */
-    color: red;
+    color: #0d1548;
     background-color: pink;
     font-size: 40px;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    padding: 24px;
+    /* margin: 40px; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.random-image {
+    width: 300px;
+    /* height: 300px; */
 }
