@@ -1,0 +1,15 @@
+/* 
+Reguli & Conventii clase:
+- intotdeauna le scriem cu litere mici
+- cand o clasa contine mai multe cuvinte, le separam cu liniuta ( - ). NU PUI SPATIU!
+- o clasa trebuie sa fie descriptiva pentru elementul pe care este aplicata
+*/
+
+.page-title {
+    /* proprietati de css ( color, background-color, font-size etc ) */
+    /* [nume proprietate]: [valoare]; */
+    /* unele proprietati permit doar un set anume de valori */
+    color: red;
+    background-color: pink;
+    font-size: 40px;
+}
