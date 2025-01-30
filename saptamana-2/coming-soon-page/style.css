@@ -1,0 +1,125 @@
+* {
+    margin: 0px;
+    font-family: 'Josefin Sans';
+}
+
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+.page-logo {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    margin-left: 32px;
+    width: 100px;
+}
+
+.page-hero-image {
+    height: 250px;
+    background-image: url('./assets/hero-desktop.jpg');
+    background-size: cover;
+}
+/* de cele mai multe ori cand pui o imagine ca background
+ii vei seta urmatoarele proprietati: 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+*/
+
+.page-title {
+    margin-top: 48px;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 600;
+    color: var(--dark-grayish-red);
+}
+
+.page-title span {
+    font-weight: 300;
+    color: var(--desaturated-red);
+}
+
+.page-paragraph {
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--desaturated-red);
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.stay-up-to-date-form {
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 28px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.stay-up-to-date-form input {
+    font-size: 18px;
+    color: var(--desaturated-red);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 24px;
+    border-width: 1px;
+    border-color: var(--desaturated-red);
+    border-style: solid;
+    /* varianta 1 */
+    width: calc(100% - 38px);
+    /* varianta 2 */
+    /* width: 100%; */
+    /* box-sizing: border-box; */
+}
+
+.stay-up-to-date-form button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    background-color: var(--desaturated-red);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 28px;
+    padding-right: 24px;
+    border-radius: 24px;
+}
+
+.stay-up-to-date-form img {
+    margin-top: 2px;
+}
+
+/* media query */
+@media (min-width: 800px) {
+    .page-hero-image {
+        height: 350px;
+        width: 500px;
+        /* marginile auto functioneaza doar pe elementele de tip block */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    }
+}
+
+@media (min-width: 1000px) {
+    .page-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .page-title {
+        text-align: left;
+    }
+    .page-paragraph {
+        text-align: left;
+    }
+    .stay-up-to-date-form {
+        width: 440px;
+    }
+}

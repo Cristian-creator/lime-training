@@ -1,0 +1,13 @@
+--- General
+[X] Creeaza fisierele de HTML, CSS
+[X] Creeaza un folder 'assets' si introdu imaginile / iconitele de care ai nevoie
+
+-- HTML
+[X] Initializeaza structura de baza a website-ului in HTML
+[X] Adauga link catre CSS
+[X] Adauga link catre Google Fonts
+
+-- CSS
+[X] Suprascrie ( overwrite ) marginile default ale elementelor de HTML cu valoarea 0px ( a.k.a elimina marginile default )
+[X] Seteaza un font-family pe toate elementele de HTML
+[X] Extrage culorile din website in variabile de CSS ( a.k.a initializeaza paleta de culori )
