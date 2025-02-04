@@ -9,6 +9,14 @@
     --dark-grayish-red: hsl(0, 6%, 24%);
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
 .page-logo {
     margin-top: 28px;
     margin-bottom: 28px;
@@ -27,6 +35,10 @@ ii vei seta urmatoarele proprietati:
     background-repeat: no-repeat;
     background-position: center;
 */
+
+.desktop-page-logo {
+    display: none;
+}
 
 .page-title {
     margin-top: 48px;
@@ -89,6 +101,7 @@ ii vei seta urmatoarele proprietati:
     padding-left: 28px;
     padding-right: 24px;
     border-radius: 24px;
+    cursor: pointer;
 }
 
 .stay-up-to-date-form img {
@@ -112,14 +125,46 @@ ii vei seta urmatoarele proprietati:
     .page-container {
         display: flex;
         flex-direction: row-reverse;
+        height: 100%;
     }
     .page-title {
         text-align: left;
+        font-size: 54px;
+        margin-top: 160px;
     }
     .page-paragraph {
         text-align: left;
+        margin-left: 0;
+        margin-right: 0;
     }
     .stay-up-to-date-form {
         width: 440px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .page-logo {
+        display: none;
+    }
+    .page-hero-image {
+        height: 100%;
+        flex: 4;
+    }
+    .page-content {
+        flex: 6;
+        background-image: url('./assets/bg-pattern-desktop.svg');
+        background-size: cover;
+    }
+    .desktop-page-logo {
+        display: block;
+        margin-top: 48px;
+    }
+    /*
+        intotdeauna cand un element este singur in parintele lui
+        si vrem sa il centram => margin-left: auto; margin-right: auto;
+    */
+    .page-content-wrapper {
+        width: 440px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
