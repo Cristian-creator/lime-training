@@ -1,0 +1,105 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+}
+
+:root {
+    --green: #02897A;
+    --blue: #4D8DFF;
+    --purple: #740A76;
+    --black: #22343D;
+    --white: #FFFFFF;
+    --red: #F03E3D;
+}
+
+/* 
+Breakpoints:
+640px
+768px
+1024px
+1280px
+1536px
+*/
+
+/* --- Common --- */
+.section-container {
+    padding: 24px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.button-contained {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+}
+
+.button-outlined {
+    background-color: transparent;
+    color: #173A56;
+    border: 1px solid #BCD0E5;
+}
+
+/* --- Navbar --- */
+nav {
+   display: flex;
+   justify-content: space-between; 
+   padding-top: 16px;
+   padding-bottom: 16px;
+   box-shadow: 0px -2px 8px 0px #00000040;
+}
+
+/* CSS specificity */
+nav.section-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-logo-container h3 {
+    font-size: 30px;
+    line-height: 28px;
+    color: #173A56;
+}
+
+.navbar-right-side {
+    display: none;
+}
+
+.navbar-right-side ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.navbar-right-side a {
+    color: var(--black);
+    text-decoration: none;
+} 
+
+@media (min-width: 1024px) {
+    .hamburger-menu {
+        display: none;
+    }
+    .navbar-right-side {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+    }
+}

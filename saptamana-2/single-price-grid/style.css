@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla";
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray:hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.cards-container {
+    /* top, right, bottom, left */
+    /* margin: 36px 24px 36px 24px; */
+    margin-top: 48px;
+    margin-bottom: 48px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    max-width: 800px;
+}
+
+/* --- Primul div --- */
+.join-community-container {
+    padding: 16px;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.join-community-container h4 {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.join-community-container p:first-of-type {
+    color: var(--bright-yellow);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.join-community-container p:last-of-type {
+    color: var(--grayish-blue);
+    line-height: 1.6;
+}
+
+/* --- Al doilea div --- */
+.monthly-subscription-container {
+    padding: 16px;
+    background-color: var(--cyan);
+}
+
+.monthly-subscription-container h4 {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.monthly-subscription-container div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.monthly-subscription-container div p:first-of-type {
+    color: white;
+    font-size: 32px;
+}
+
+.monthly-subscription-container div p:last-of-type {
+    color: var(--light-gray);
+    opacity: 0.5;
+}
+
+.monthly-subscription-container > p {
+    color: white;
+    margin-bottom: 16px;
+}
+
+/* --- Al treilea div --- */
+.why-us-container {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: hsl(179deg, 47%, 52%);
+    padding: 16px;
+}
+
+.why-us-container h4 {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.why-us-container ul {
+    list-style-type: none;
+}
+
+.why-us-container ul li {
+    color: white;
+    opacity: 0.75;
+    margin-bottom: 4px;
+}
+
+@media (min-width: 800px) {
+    .bottom-cards-row {
+        display: flex;
+    }
+    /* cand vrei sa umblii la latimile unor elemente 
+    dintr-un flexbox foloseste proprietatea de CSS flex */
+    .monthly-subscription-container {
+        flex: 1; 
+    }
+    .why-us-container {
+        flex: 1;
+    }
+    .cards-container {
+        /* width: 1000px; */
+    }
+}
