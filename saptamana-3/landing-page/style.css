@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins';
+    color: var(--black);
 }
 
 :root {
@@ -25,6 +26,16 @@ Breakpoints:
 /* --- Common --- */
 .section-container {
     padding: 24px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--black);
 }
 
 button {
@@ -94,6 +105,9 @@ nav.section-container {
 } 
 
 @media (min-width: 1024px) {
+    nav {
+        box-shadow: none;
+    }
     .hamburger-menu {
         display: none;
     }
@@ -156,5 +170,83 @@ nav.section-container {
     header {
         display: flex;
         flex-direction: row-reverse;
+        align-items: center;
+        gap: 32px;
+    }
+    .header-image {
+        max-width: 600px;
+    }
+    .header-title {
+        text-align: left;
+        width: 340px;
+    }
+    .header-description {
+        text-align: left;
+        width: 458px;
+    }
+    .header-buttons {
+        justify-content: start;
+        margin-top: 48px;
+    }
+}
+
+/* --- About Product --- */
+.about-product-title {
+    text-align: center;
+    margin-bottom: 48px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-product-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.about-product-cards div {
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-product-cards div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+}
+
+.about-product-cards div h3 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 8px;
+}
+
+.about-product-cards div p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.about-product-button {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+    .about-product-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }

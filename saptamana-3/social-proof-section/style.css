@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan";
+}
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+header {
+    margin-top: 80px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 80px;
+}
+
+.header-title {
+    margin-bottom: 24px;
+}
+
+.header-description {
+    margin-bottom: 24px;
+}
+
+.rating-stars-container {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-card-header {
+    display: flex;
+}
