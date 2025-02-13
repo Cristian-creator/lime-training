@@ -320,12 +320,22 @@ nav.section-container {
 }
 
 /* --- Quick & Easy Process --- */
+.quick-and-easy-process-container {
+    background-image: url("./assets/quick-and-easy-process/background.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+
 .quick-and-easy-process-paragraph {
     margin-top: 8px;
     margin-bottom: 40px;
+    max-width: 542px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* 
+
 justify-content vs align-items
 
 cazul 1) flex-direction: row
@@ -361,6 +371,12 @@ align-items: manevreaza elementele din div pe ox
     width: 90px;
 }
 
+.contact-our-expert-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (min-width: 441px) {
     .first-freelancing-offer,
     .second-freelancing-offer,
@@ -384,4 +400,65 @@ align-items: manevreaza elementele din div pe ox
         gap: 24px;
         margin-bottom: 48px;
     }
+    .second-freelancing-offer {
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
+    .fourth-freelancing-offer {
+        grid-column: 2/2;
+        grid-row: 1/1;
+    }
+}
+
+
+hr {
+    margin: 200px;
+}
+
+.offer-container {
+    position: relative;
+    margin-left: 100px;
+}
+
+.offer-text {
+    position: relative;
+    z-index: 100;
+}
+
+.big-bubble {
+    z-index: 0;
+    width: 274px;
+    height: 53px;
+    background-color: red;
+    border-radius: 50px;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.medium-bubble {
+    position: absolute;
+    bottom: -6px;
+    left: 32px;
+
+    height: 17px;
+    width: 17px;
+    background-color: red;
+    border-radius: 50px;
+}
+
+.small-bubble {
+    height: 9px;
+    width: 9px;
+    background-color: red;
+    border-radius: 50px;
+
+    position: absolute;
+    bottom: -14px;
+    left: 20px;
 }
