@@ -23,6 +23,41 @@ Breakpoints:
 1536px
 */
 
+/* 
+Paragraphs:
+
+1)
+font-weight: 400
+font-size: 16px
+line-height: 26px
+
+2)
+font-weight: 600
+font-size: 16px
+line-height: 24px
+
+3)
+font-weight: 500
+font-size: 16px
+line-height: 26px
+
+4)
+font-weight: 500
+font-size: 16px
+line-height: 24px
+
+5)
+font-weight: 400
+font-size: 16px
+line-height: 28px
+
+6)
+font-weight: 500
+font-size: 16px
+line-height: 22px
+
+*/
+
 /* --- Common --- */
 .section-container {
     padding: 24px;
@@ -36,6 +71,42 @@ Breakpoints:
     font-size: 32px;
     line-height: 48px;
     color: var(--black);
+}
+
+.text-base {
+    font-size: 16px;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.lh-22 {
+    line-height: 22px;
+}
+
+.lh-24 {
+    line-height: 24px;
+}
+
+.lh-26 {
+    line-height: 26px;
+}
+
+.lh-28 {
+    line-height: 28px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 button {
@@ -228,9 +299,6 @@ nav.section-container {
 
 .about-product-cards div p {
     text-align: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
 }
 
 .about-product-button {
@@ -248,5 +316,72 @@ nav.section-container {
     .about-product-cards {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+}
+
+/* --- Quick & Easy Process --- */
+.quick-and-easy-process-paragraph {
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+
+/* 
+justify-content vs align-items
+
+cazul 1) flex-direction: row
+justify-content: manevreaza elementele din div pe ox
+align-items: manevreaza elementele din div pe oy
+
+cazul 2) flex-directiom: column
+justify-content: manevreaza elementele din div pe oy
+align-items: manevreaza elementele din div pe ox
+
+*/
+
+.freelancing-offers {
+    margin-bottom: 32px;
+}
+
+.first-freelancing-offer, .third-freelancing-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.second-freelancing-offer, .fourth-freelancing-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.first-freelancing-offer img:last-child,
+.second-freelancing-offer img:last-child,
+.third-freelancing-offer img:last-child,
+.fourth-freelancing-offer img:last-child {
+    width: 90px;
+}
+
+@media (min-width: 441px) {
+    .first-freelancing-offer,
+    .second-freelancing-offer,
+    .third-freelancing-offer,
+    .fourth-freelancing-offer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .first-freelancing-offer,
+    .third-freelancing-offer {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 1024px) {
+    .freelancing-offers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 48px;
     }
 }
