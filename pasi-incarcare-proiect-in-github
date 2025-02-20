@@ -1,0 +1,27 @@
+# Pasii pentru incarcare proiect
+
+Pasul 1: rezolvi tema
+
+Pasul 2: intrii in GitHub si creezi un repository
+
+Pasul 3: intrii in VS Code si deschizi folderul cu tema
+
+- git init ( se executa o singura data, la inceput )
+- git add . ( comanda asta ii spune git-ului ce fisiere vrem sa incarcam in repository )
+- git commit -m "mesaj" ( comanda asta trebuie executata de fiecare data dupa git add. comanda asta impacheteaza toate fisierele
+  intr-o singura versiune )
+- git branch -M main ( optional - daca in stanga jos in VS Code iti apare "master" )
+- git remote add origin ... ( comanda asta ii spune git-ului in ce repository sa ne incarce codul )
+- git push -u origin main ( comanda asta incarca codul in Github )
+
+Atentie la mesajele care apar dupa executarea fiecarei comenzi de git.
+
+# Pasii pentru actualizare proiect
+
+Pasul 1: faci modificari
+
+Pasul 2: Intrii in terminal si executi comenzile:
+
+- git add .
+- git commit -m "mesaj"
+- git push

@@ -1,0 +1,78 @@
+/* 
+
+Toate sunt pseudo-clase de CSS
+
+first-child: selecteaza elementul care este pozitionat
+ca prim copil in interiorul parintelui
+( la fel functioneaza si :last-child, :nth-child )
+
+first-of-type: selecteaza prima aparitie a elementului
+in interiorul parintelui ( nu conteaza pozitia )
+( la fel functioneaza si :last-of-type, :nth-of-type() )
+
+*/
+
+/* selecteaza ultimul paragraf din card */
+/* .my-section p:last-of-type {
+    color: red;
+    font-weight: 700;
+} */
+
+.my-section p:nth-child(3n) {
+    color: red;
+}
+
+.card-container h3:not(.second-title) {
+    color: yellow;
+}
+
+.card-container .text-base:nth-child(2) {
+    color: blue;
+}
+
+.card-container p:nth-child(3) {
+    color: green;
+}
+
+.card-container p:first-of-type {
+    color: blue;
+}
+.card-container p:nth-of-type(2) {
+    color: blue;
+}
+
+input:read-only {
+    background-color: lightgray;
+}
+
+.my-link:visited {
+    color: green;
+}
+
+.click-me-button {
+    display: block;
+    margin-top: 24px;
+
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    background-color: #02897A;
+    color: white;
+    border: none;
+
+    transition-property: background-color, color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.click-me-button:hover {
+    background-color: white;
+    color: #02897A;
+}

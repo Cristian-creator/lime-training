@@ -1,0 +1,36 @@
+/* Cazul 1 */
+.page-title {
+    text-align: center;
+}
+
+/* Cazul 2 */
+.card-container {
+    background-color: lightgray;
+    border: 1px solid gray;
+    width: 300px;
+
+    /* daca e nevoie, adaugi si display: block */
+    /* atentie! e posibil sa ai nevoie sa setezi si width-ul */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+}
+
+/* Cazul 3 */
+.divs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-div {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+.second-div {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
