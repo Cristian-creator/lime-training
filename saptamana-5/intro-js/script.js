@@ -6,6 +6,14 @@
 // 4) pui o valoare
 // 5) pui punct si virgula
 
+let inputNumbers = prompt(20);
+console.log(inputNumbers);
+if (inputNumbers >= 0) {
+  console.log("The number is positive");
+} else {
+  console.log("The number is negative ");
+}
+
 let x = 5;
 
 // Timp 19:57
