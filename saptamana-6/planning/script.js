@@ -82,11 +82,13 @@
 // 6. Folosind un for loop sa se calculeze suma numerelor pare de la 1 la 10 (19:59)
 // let sum = 0;
 
-// for (let i = 1; i <= 10; i++) {
+// for (let i = 0; i <= 10; i++) {
 //   if (i % 2 === 0) {
 //     sum += i;
 //   }
 // }
+
+// 1 % 2 =
 
 // 7. Folosind un for loop sa se calculeze produsul numerelor de la 1 la 10
 // let prod = 1;
@@ -159,3 +161,51 @@ for (let i = 0; i < numbers.length; i++) {
     counter++;
   }
 }
+
+// tema - 04.03.2025
+// 1) Exercitiul asta este pentru o clinica care are nevoie sa faca o categorisire pe pacienti in functie de varsta. Task-uri:
+// - creeaza o variabila care contine varsta pacientului
+// - daca varsta este sub 12 => afiseaza in consola "copil"
+// - daca varsta este intre 12 (inclusiv) si sub 18 => afiseaza in consola "adolescent"
+// - daca varsta este intre 18 (inclusiv) si 65 => afiseaza in consola "adult"
+// - daca varsta este peste 65 (inclusiv) => afiseaza in consola "senior"
+
+// 2) Exercitiul asta este pentru determinarea procentului de reducere aplicat la o cafenea. Task-uri:
+// - creeaza 3 variabile: una pentru costul total al bonului inainte de reducere, una care indica daca clientul este student sau nu ( val booleana ),
+// una care indica daca este weekend ( booleana )
+// - daca clientul este student si totodata este weekend => aplica o reducere de 20% pe costul total si afiseaza in consola "Pretul final dupa aplicarea reducerii este de X lei"
+// - daca clientul este student sau daca este weekend => aplica o reducere de 10% pe costul total si afiseaza in consola "Pretul final dupa aplicarea reducerii este de X lei"
+// - daca nu a fost aplicata nicio reducere => afiseaza in consola "Pret: X lei"
+
+// 3) Exercitiul asta este pentru afisarea eligibilitatii (LGBT) unui student la bursa. Task-uri:
+// - creeaza 4 variabile: una care contine media notelor studentului, una care contine nr de absente,
+// una care contine nota minima ca sa iei bursa, una care contine numarul de absente MAXIM admis ca sa iei bursa
+// - daca studentul are media necesara si se incadreaza in nr maxim admis de absente, sa se afiseze in consola "felicitari, esti eligibil pentru bursa"
+// - daca studentul nu se incadreaza cu media, dar cu absentele sta bine, atunci sa se afiseze un mesaj in consola gen "ai numarul de absente admis, dar nu te incadrezi cu media ca sa primesti bursa"
+// - la fel ca mai sus, sa se trateze cazul invers ( medie buna, absente nu )
+// - daca studentul nu indeplineste nicio conditie, sa se afiseze in consola un mesaj sugestiv
+// ( tip: folositi else if )
+
+// 4) (vezi cerinta aici - minutul 0:00 )
+
+// 5) (vezi cerinta aici - minutul 5:00 )
+
+// 6) (vezi cerinta aici - minutul 5:00 )
+
+// 7) Sa se creeze o variabila care contine un array cu numere - reprezentand varstele unui grup, iar o alta variabila
+// cu numele "children" si valoarea 0. Folosind un for loop, sa se treaca prin fiecare element din array si sa se numere
+// cati copii sunt ( practic cate varste sunt mai mici decat 12 ). La final, sa se afiseze in consola "No. of children: X".
+//  P.S. - daca nu e clar, numaratoarea se face in variabila children
+
+// 8) Tot in codul solutiei de mai sus, includeti extra o numaratoare si pentru adolescenti - interval 12 (inclusiv) - 18.
+// La final, sub console.log-ul de la children, sa se afiseze "No. of teenagers: Y".
+// O numaratoare pentru adulti - interval 18 (inclusiv) - 65. La final sa se afiseze in consola "No. of adults: Z"
+// O numaratoare pentru seniori - peste 65 (inclusiv). La final sa se afiseze in consola "No. of seniors: "
+
+// 9) Tot in codul solutiei de mai sus, includeti calcularea sumei totale a varstelor. Ex: daca ai array-ul [5, 20, 8] => se va afisa "Sum of ages: 33".
+
+// 10) Tot in codul solutiei de mai sus, includeti un console.log la final care sa afiseze media varstelor. Ex: daca ai array-ul [5, 20, 8] => se va afisa "Average: 11".
+
+// IMPORTANT:
+// - folositi nume de variabile sugestive, pe notatia camelCase, iar cuvintele folosite sa fie in engleza
+// - codul sa fie formatat ca la curs
