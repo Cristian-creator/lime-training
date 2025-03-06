@@ -94,7 +94,7 @@ let isOverage = userAge >= 18; // true / false
 
 console.log(myName.length);
 
-if (myName.length === 15) {
+if (myName.length <= 15) {
   alert("ok");
 } else {
   alert("long");
