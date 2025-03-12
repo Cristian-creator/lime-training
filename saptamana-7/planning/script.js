@@ -153,19 +153,34 @@ const cartItems = [
   },
 ];
 
+// Ierarhie
+// global scope -> function scope -> block scope ( creat de for )
+
+// Accesibilitate
+// global scope <- function scope <- block scope ( creat de for )
+
 const getCartTotal = (products) => {
   if (products.length === 0) {
     return "Cart is empty";
   }
 
+  // function scope
   let sum = 0;
 
   for (let i = 0; i < products.length; i++) {
-    sum += products[0].price * products[i].quantity;
+    // block scope
+    const totalPrice = products[0].price * products[i].quantity;
+    sum += totalPrice;
   }
+
+  // function scope
+  console.log(totalPrice);
 
   return sum;
 };
+
+// sum is not defined
+console.log(sum);
 
 console.log(getCartTotal(cartItems));
 
@@ -191,3 +206,82 @@ const price = 51.3467;
 price += 10;
 
 console.log(price.toFixed(2));
+
+// --- Tema ---
+// Exercitiul 1) sa se creeze o functie care primeste ca parametru score-ul unui student la un test (interval 0 - 100).
+// functia trebuie sa returneze grade-ul in sistem amerikanesk, adica:
+// "F" daca score < 50.
+// "D" daca 50 <= score < 65.
+// "C" daca 65 <= score < 80.
+// "B" daca 80 <= score < 90.
+// "A" daca score >= 90.
+
+// Exercitiul 2) sa se creeze o functie care primeste ca parametru un username.
+// functia trebuie sa returneze
+// 1) "This field is required" daca username-ul nu a fost introdus
+// 2) "Invalid username" daca username-ul are sub 5 caractere SAU daca include spatiu SAU caractere speciale
+// 3) "Valid username" daca se trece de validarile de mai sus
+
+// Exercitiul 3) sa se creeze o functie care primeste ca parametru un email.
+// functia trebuie sa returneze
+// 1) "This field is required" daca emailul nu a fost introdus
+// 2) "Invalid username" daca emailul nu e valid. un mail valid:
+// - are peste 6 caractere
+// - contine @ si .
+// - nu contine mai multi de a rond sau mai multe puncte
+// - nu contine caractere speciale in afara de _ sau -
+// - nu contine _ sau - inainte sau dupa @
+// - nu contine _ sau - inainte sau dupa .
+// - @ trebuie sa fie inainte de .
+// - @ trebuie sa nu se afle pe prima pozitie in string
+// - . trebuie sa nu se afle pe ultima pozitie in string
+// - intre @ si . trebuie sa existe cel putin un caracter
+// - dupa . trebuie sa aiba minim 2 caractere
+// 3) "Valid email" daca se trece de validarile de mai sus
+
+// Exercitiul 4) sa se creeze o functie care primeste ca parametru un cod de discount (string).
+// un cod de discount este considerat valid daca:
+// - are 8 caractere
+// - contine minim 2 numere
+// - contine minim o litera cu uppercase
+// Daca un cod este invalid sa se returneze "Invalid code", altfel "Valid code".
+
+// Exercitiul 5) sa se creeze o functie care are un parametru reprezentand soldul unui cont bancar ( number ) al unei persoane,
+// iar al doilea parametru reprezentand suma de bani pe care vrea sa o scoata din bancomat ( number ).
+// functia sa returneze:
+// - "Invalid amount" daca suma de bani nu e numar pozitiv intreg
+// - "Please choose a multiple of ten" daca suma de bani nu e multiplu de 10
+// - "Insufficient funds" daca suma de bani e mai mare decat soldul
+// - "Success! You've withdrawed $X. Your new balance is $Y" daca e totul bn
+
+// Exercitiul 6) sa se creeze o functie care are 3 parametrii a, b si c. fiecare reprezinta lungimea laturii unui triunghi.
+// daca exista vreo latura care sa aiba o lungime invalida ( numar non-pozitiv ) => sa se returneze "Invalid triangle"
+// daca triunghiul este dreptunghic => "Right Triangle" ( hint: pitagora )
+// daca cele 3 laturi sunt egale => "Equilateral"
+// daca cele 2 laturi sunt egale => "Isosceles"
+// daca cele nu exista laturi egale => "scalene"
+
+// Exercitiul 7) Sa se creeze o functie care are scopul de a returna statusul unui birou - daca e deschis sau nu
+// intr-o zi specifica, la o ora anume. Biroul este deschis in intervalul M-F, orele 9-18.
+
+// Functia are 2 parametrii: day si hour.
+// Day poate fi un string din lista urmatoare: "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday".
+// Hour poate fi un numar din intervalul 0-23.
+
+// Daca day nu e o valoare valida ( adica un string din list aia) => sa se returneze "Invalid day".
+// Daca hour nu e o valoare valida => sa se returneze "Invalid hour".
+
+// Daca biroul este deschis => sa se returneze "Office is open"
+// Daca biroul este inchis => sa se returneze "Office is closed."
+
+// Extra challenge: daca e inchis biroul, sa se returneze un string de genul: "Office is closed. It will open tomorrow at 9AM".
+// Practic afisam cea mai apropiata zi + ora, asa cum apare gen in google cand dai search dupa un restaurant.
+// Aici fiti atenti ca daca day este vineri, iar biroul se deschide luni => acel tomorrow nu e corect, trebuie pus altceva.
+// Sunt cateva cazuri de tratat, nu le mentionez. Ganditi-o voi foarte atent.
+
+// Timp 19:54
+// Criterii:
+// 1) minim 8 caractere
+// 2) minim o cifra
+// 3) minim o majuscula
+// 4) minim un caracter special !, @, #, $, %, ^, &, *, (, )
