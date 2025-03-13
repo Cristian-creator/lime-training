@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kode Mono";
+}
+
+html, body {
+    height: 100%;
+}
+
+.color-switcher-container {
+    background-color: #AD636C;
+    height: 100%;
+    display: flex;
+    /* pe flex-direction: column se inverseaza axele */
+    flex-direction: column;
+    /* OY */
+    align-items: center;
+    /* OX */
+    justify-content: center;
+    gap: 20px;
+}
+
+.color-switcher-container h2 {
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 75%);
+    padding-block: 8px;
+    padding-inline: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.color-switcher-container span {
+    color: #AD636C;
+}
+
+.color-switcher-container button {
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 75%);
+    padding-block: 8px;
+    padding-inline: 12px;
+    border-radius: 6px;
+    font-weight: 400;
+    border: none;
+    font-size: 16px;
+}
