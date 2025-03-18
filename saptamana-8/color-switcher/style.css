@@ -10,7 +10,11 @@ html, body {
 
 .color-switcher-container {
     background-color: #AD636C;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
     height: 100%;
+    position: relative;
     display: flex;
     /* pe flex-direction: column se inverseaza axele */
     flex-direction: column;
@@ -31,7 +35,7 @@ html, body {
     font-size: 40px;
 }
 
-.color-switcher-container span {
+.color-switcher-container h2 span {
     color: #AD636C;
 }
 
@@ -45,4 +49,16 @@ html, body {
     font-weight: 400;
     border: none;
     font-size: 16px;
+}
+
+.color-switcher-container p {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 75%);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #FFFFFF;
 }
