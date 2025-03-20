@@ -5,14 +5,14 @@
 }
 
 :root {
-    --green-400: hsl(172, 67%, 45%);
-    --green-900: hsl(183, 100%, 15%);
+    --green-400: hsl(172, 67%, 45%); /* #26C2AE */
+    --green-900: hsl(183, 100%, 15%); /*  */
     
-    --grey-50: hsl(189, 47%, 97%);
-    --grey-200: hsl(185, 41%, 84%);
-    --grey-400: hsl(184, 14%, 56%);
-    --grey-500: hsl(186, 14%, 43%);
-    --grey-900: hsl(183, 100%, 15%);
+    --grey-50: hsl(189, 47%, 97%); /* #F3F9FA */
+    --grey-200: hsl(185, 41%, 84%); /*  */
+    --grey-400: hsl(184, 14%, 56%); /*  */
+    --grey-500: hsl(186, 14%, 43%); /*  */
+    --grey-900: hsl(183, 100%, 15%); /* #00474B */
 
     --white: hsl(0, 100%, 100%);
 }
@@ -30,3 +30,69 @@
 700
 
 */
+
+body {
+    background-color: var(--grey-200);
+}
+
+section {
+    margin-top: 50px;
+}
+
+/* --- Common --- */
+.standard-label {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--grey-500);
+    margin-bottom: 6px;
+}
+
+.standard-input {
+    line-height: 36px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+    color: var(--grey-900);
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--grey-50);
+    border-width: 2px;
+    border-color: var(--grey-50);
+    border-style: solid;
+    border-radius: 5px;
+    outline: none;
+}
+
+.standard-input:hover {
+    border-color: var(--green-400);
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-icon-left {
+    position: absolute;
+    left: 20px;
+    top: 18px;
+}
+
+/* --- Section ---- */
+/* upside down */
+.page-logo {
+    display: block;
+    /* functioneaza doar pe elementele block */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.calculator-container {
+    background-color: var(--white);
+    padding: 32px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}

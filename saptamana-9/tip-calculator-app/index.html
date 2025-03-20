@@ -13,28 +13,34 @@
   </head>
   <body>
     <section>
-      <img src="./assets/logo.svg" />
+      <img class="page-logo" src="./assets/logo.svg" />
 
       <div class="calculator-container">
         <form>
           <!-- Bill field -->
-          <label for="amount">Bill</label>
-          <input id="amount" type="number" />
-          <img src="./assets/icon-dollar.svg" />
+          <label class="standard-label" for="amount">Bill</label>
+          <div class="input-container">
+            <input id="amount" type="number" class="standard-input" />
+            <img class="input-icon-left" src="./assets/icon-dollar.svg" />
+          </div>
 
           <!-- Tip field -->
-          <label for="tip">Select Tip %</label>
+          <label class="standard-label" for="tip">Select Tip %</label>
           <button>5%</button>
           <button>10%</button>
           <button>15%</button>
           <button>25%</button>
           <button>50%</button>
-          <input id="tip" type="number" />
+          <input id="tip" type="number" class="standard-input" />
 
           <!-- Number of people field -->
-          <label for="number-of-people">Number of People</label>
-          <input id="number-of-people" type="number" />
-          <img src="./assets/icon-person.svg" />
+          <label class="standard-label" for="number-of-people"
+            >Number of People</label
+          >
+          <div class="input-container">
+            <input id="number-of-people" type="number" class="standard-input" />
+            <img class="input-icon-left" src="./assets/icon-person.svg" />
+          </div>
 
           <!-- Calculate -->
           <button type="submit">Calculate</button>
