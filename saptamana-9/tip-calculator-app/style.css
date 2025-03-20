@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Space Mono";
+}
+
+:root {
+    --green-400: hsl(172, 67%, 45%);
+    --green-900: hsl(183, 100%, 15%);
+    
+    --grey-50: hsl(189, 47%, 97%);
+    --grey-200: hsl(185, 41%, 84%);
+    --grey-400: hsl(184, 14%, 56%);
+    --grey-500: hsl(186, 14%, 43%);
+    --grey-900: hsl(183, 100%, 15%);
+
+    --white: hsl(0, 100%, 100%);
+}
+
+/* 
+
+-> Breakpoints
+640px
+768px
+1024px
+1280px
+1536px
+
+-> Font weights
+700
+
+*/

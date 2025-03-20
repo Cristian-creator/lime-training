@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <section>
+      <img src="./assets/logo.svg" />
+
+      <div class="calculator-container">
+        <form>
+          <!-- Bill field -->
+          <label for="amount">Bill</label>
+          <input id="amount" type="number" />
+          <img src="./assets/icon-dollar.svg" />
+
+          <!-- Tip field -->
+          <label for="tip">Select Tip %</label>
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <input id="tip" type="number" />
+
+          <!-- Number of people field -->
+          <label for="number-of-people">Number of People</label>
+          <input id="number-of-people" type="number" />
+          <img src="./assets/icon-person.svg" />
+
+          <!-- Calculate -->
+          <button type="submit">Calculate</button>
+        </form>
+        <div class="results-container">
+          <!-- First row -->
+          <div class="results-row">
+            <div>
+              <h4>Tip Amount</h4>
+              <p>/ person</p>
+            </div>
+            <p>$0.00</p>
+          </div>
+
+          <!-- Second row -->
+          <div class="results-row">
+            <div>
+              <h4>Total</h4>
+              <p>/ person</p>
+            </div>
+            <p>$0.00</p>
+          </div>
+
+          <!-- Reset button -->
+          <button disabled="true">RESET</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
