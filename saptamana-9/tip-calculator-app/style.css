@@ -47,6 +47,11 @@ section {
     margin-bottom: 6px;
 }
 
+.label-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .standard-input {
     line-height: 36px;
     padding-top: 6px;
@@ -64,6 +69,12 @@ section {
     border-style: solid;
     border-radius: 5px;
     outline: none;
+}
+
+.standard-input-error {
+    color: #E17457;
+    font-weight: 700;
+    display: none;
 }
 
 .standard-input:hover {
@@ -95,4 +106,11 @@ section {
     padding: 32px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+}
+
+.tip-button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
