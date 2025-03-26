@@ -31,27 +31,37 @@
               class="standard-input"
               name="amount"
               placeholder="0"
-              min="0" />
+              min="0"
+              step="0.01" />
             <img class="input-icon-left" src="./assets/icon-dollar.svg" />
           </div>
 
           <!-- Tip field -->
           <label class="standard-label" for="tip">Select Tip %</label>
           <div>
-            <button class="tip-button">5%</button>
-            <button class="tip-button">10%</button>
-            <button class="tip-button">15%</button>
-            <button class="tip-button">25%</button>
-            <button class="tip-button">50%</button>
+            <button class="tip-button" type="button" value="5">5%</button>
+            <button class="tip-button" type="button" value="10">10%</button>
+            <button class="tip-button" type="button" value="15">15%</button>
+            <button class="tip-button" type="button" value="25">25%</button>
+            <button class="tip-button" type="button" value="50">50%</button>
           </div>
-          <input id="tip" type="number" class="standard-input" />
+          <input
+            id="tip"
+            type="number"
+            class="standard-input custom-tip-input"
+            placeholder="Custom"
+            name="custom-tip" />
 
           <!-- Number of people field -->
           <label class="standard-label" for="number-of-people"
             >Number of People</label
           >
           <div class="input-container">
-            <input id="number-of-people" type="number" class="standard-input" />
+            <input
+              id="number-of-people"
+              type="number"
+              class="standard-input"
+              name="number-of-people" />
             <img class="input-icon-left" src="./assets/icon-person.svg" />
           </div>
 
@@ -74,12 +84,30 @@
               <h4>Total</h4>
               <p>/ person</p>
             </div>
-            <p>$0.00</p>
+            <p class="total-per-person">$0.00</p>
           </div>
 
           <!-- Reset button -->
-          <button disabled="true">RESET</button>
+          <button disabled class="reset-button">RESET</button>
         </div>
+      </div>
+
+      <div class="history-container">
+        <p class="history-not-available">
+          There is no history data at the moment
+        </p>
+        <table class="history-table">
+          <thead>
+            <th>Bill</th>
+            <th>Tip</th>
+            <th>People</th>
+            <th>Date</th>
+            <th></th>
+          </thead>
+          <tbody>
+            <tr></tr>
+          </tbody>
+        </table>
       </div>
     </section>
     <script src="./script.js"></script>

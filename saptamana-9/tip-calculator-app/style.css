@@ -106,6 +106,9 @@ section {
     padding: 32px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tip-button {
@@ -113,4 +116,37 @@ section {
     padding-bottom: 8px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.selected-tip {
+    background-color: var(--green-400);
+    color: var(--grey-900);
+}
+
+/* --- Reset Button --- */
+.reset-button {
+    background-color: var(--green-400);
+    color: var(--green-900);
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.reset-button:disabled {
+    background-color: hsl(183, 79%, 24%);
+}
+
+/* --- History --- */
+.history-container {
+    margin-top: 48px;
+    background-color: var(--white);
+    padding: 32px;
+    border-radius: 25px;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history-table {
+    display: none;
 }
