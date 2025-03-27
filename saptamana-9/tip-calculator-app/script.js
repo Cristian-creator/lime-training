@@ -6,20 +6,78 @@ const numberOfPeopleInputError = document.querySelector(
 );
 const totalPerPersonElement = document.querySelector(".total-per-person");
 
+// History
 const historyNotAvailableMessage = document.querySelector(
   ".history-not-available"
 );
 const historyTable = document.querySelector(".history-table");
 const historyTableBody = historyTable.querySelector("tbody");
 
+// Statistics
+const averageBillElement = document.querySelector(".average-bill");
+
 let selectedTip;
 let history = [];
 
+const getFormattedDate = () => {
+  const currentDate = new Date();
+  const formattedDate = new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(currentDate);
+
+  return formattedDate;
+};
+
+const createHistoryRow = (amount, numberOfPeople) => {
+  const newHistoryElement = document.createElement("tr");
+  newHistoryElement.innerHTML = `
+    <td>${amount}</td>
+    <td>${selectedTip}</td>
+    <td>${numberOfPeople}</td>
+    <td>${getFormattedDate()}</td>
+    <td>
+      <button class="delete-button">
+        <img src="./assets/delete.svg" />
+      </button>
+    </td>
+  `;
+  historyTableBody.appendChild(newHistoryElement);
+
+  // delete button
+  const deleteButton = newHistoryElement.querySelector(".delete-button");
+
+  const handleDeleteHistoryRow = () => {
+    const userConfirmed = confirm("Are you sure? This action is irreversible.");
+
+    if (userConfirmed === true) {
+      historyTableBody.removeChild(newHistoryElement);
+    }
+  };
+
+  deleteButton.addEventListener("click", handleDeleteHistoryRow);
+};
+
+const updateAverageBill = () => {
+  let sum = 0;
+
+  for (let i = 0; i < history.length; i++) {
+    sum += history[i].bill;
+  }
+
+  const average = sum / history.length;
+
+  averageBillElement.innerText = "$" + average.toFixed(2);
+};
+
 const handleFormSubmit = (e) => {
   e.preventDefault();
-  console.log(selectedTip);
 
   const data = new FormData(e.target);
+
   let numberOfErrors = 0;
 
   // amount
@@ -57,25 +115,18 @@ const handleFormSubmit = (e) => {
   historyNotAvailableMessage.classList.add("hide");
   historyTable.classList.remove("hide");
 
-  const currentDate = new Date();
-  const formattedDate = new Intl.DateTimeFormat("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(currentDate);
-  const newHistoryElement = document.createElement("tr");
-  newHistoryElement.innerHTML = `
-    <td>${amount}</td>
-    <td>${selectedTip}</td>
-    <td>${numberOfPeople}</td>
-    <td>${formattedDate}</td>
-    <td>
-      <img src="./assets/delete.svg" />
-    </td>
-  `;
-  historyTableBody.appendChild(newHistoryElement);
+  createHistoryRow(amount, numberOfPeople);
+
+  history.push({
+    bill: amount,
+    tip: selectedTip,
+    numberOfPeople: numberOfPeople,
+  });
+
+  console.log(history);
+
+  // statistics
+  updateAverageBill();
 };
 
 form.addEventListener("submit", handleFormSubmit);
