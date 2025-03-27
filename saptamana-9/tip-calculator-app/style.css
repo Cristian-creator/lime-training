@@ -91,6 +91,10 @@ section {
     top: 18px;
 }
 
+.hide {
+    display: none;
+}
+
 /* --- Section ---- */
 /* upside down */
 .page-logo {
@@ -109,6 +113,12 @@ section {
     max-width: 920px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.calculator-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .tip-buttons-container {
@@ -155,7 +165,23 @@ section {
 }
 
 .history-table {
-    display: none;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-table tr:not(.head-row) {
+    border-top-width: 1px;
+    border-top-color: var(--grey-200);
+    border-top-style: solid;
+}
+
+.history-table td {
+    text-align: center;
+    padding: 8px;
+}
+
+.history-table th {
+    padding: 8px;
 }
 
 @media (min-width: 768px) {
@@ -166,6 +192,7 @@ section {
     }
     .calculator-container form {
         flex: 1;
+        gap: 40px;
     }
     .tip-buttons-container {
         grid-template-columns: 1fr 1fr 1fr;

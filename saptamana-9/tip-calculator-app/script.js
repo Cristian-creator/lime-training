@@ -1,7 +1,16 @@
 // --- Form ---
 const form = document.querySelector(".calculator-container form");
 const amountInputError = document.querySelector(".amount-input-error");
+const numberOfPeopleInputError = document.querySelector(
+  ".number-of-people-input-error"
+);
 const totalPerPersonElement = document.querySelector(".total-per-person");
+
+const historyNotAvailableMessage = document.querySelector(
+  ".history-not-available"
+);
+const historyTable = document.querySelector(".history-table");
+const historyTableBody = historyTable.querySelector("tbody");
 
 let selectedTip;
 let history = [];
@@ -11,13 +20,15 @@ const handleFormSubmit = (e) => {
   console.log(selectedTip);
 
   const data = new FormData(e.target);
+  let numberOfErrors = 0;
 
   // amount
   const amount = Number(data.get("amount"));
   if (amount <= 0) {
-    amountInputError.style.display = "block";
+    amountInputError.classList.remove("hide");
+    numberOfErrors++;
   } else {
-    amountInputError.style.display = "none";
+    amountInputError.classList.add("hide");
   }
 
   // tip
@@ -25,12 +36,46 @@ const handleFormSubmit = (e) => {
 
   // number of people
   const numberOfPeople = Number(data.get("number-of-people"));
+  if (numberOfPeople <= 0) {
+    numberOfPeopleInputError.classList.remove("hide");
+    numberOfErrors++;
+  } else {
+    numberOfPeopleInputError.classList.add("hide");
+  }
+
+  if (numberOfErrors > 0) {
+    return;
+  }
 
   const totalPerPerson =
     (amount + (selectedTip / 100) * amount) / numberOfPeople;
   totalPerPersonElement.innerText = "$" + totalPerPerson.toFixed(2);
 
   resetButton.removeAttribute("disabled");
+
+  // history
+  historyNotAvailableMessage.classList.add("hide");
+  historyTable.classList.remove("hide");
+
+  const currentDate = new Date();
+  const formattedDate = new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(currentDate);
+  const newHistoryElement = document.createElement("tr");
+  newHistoryElement.innerHTML = `
+    <td>${amount}</td>
+    <td>${selectedTip}</td>
+    <td>${numberOfPeople}</td>
+    <td>${formattedDate}</td>
+    <td>
+      <img src="./assets/delete.svg" />
+    </td>
+  `;
+  historyTableBody.appendChild(newHistoryElement);
 };
 
 form.addEventListener("submit", handleFormSubmit);
