@@ -1,6 +1,3 @@
-// De vorbit:
-// - calculele nu trebuie sa se faca daca exista erori
-
 // --- Form ---
 const form = document.querySelector(".calculator-container form");
 const amountInputError = document.querySelector(".amount-input-error");
@@ -25,15 +22,13 @@ const handleFormSubmit = (e) => {
 
   // tip
   const tip = Number(data.get("custom-tip"));
-  // aici inserezi validarile pentru inputul custom
 
   // number of people
   const numberOfPeople = Number(data.get("number-of-people"));
 
-  // (50 + 10/100 * 50) / 2
   const totalPerPerson =
     (amount + (selectedTip / 100) * amount) / numberOfPeople;
-  totalPerPersonElement.innerText = "$" + totalPerPerson.toFixed(2); // "$57.5"
+  totalPerPersonElement.innerText = "$" + totalPerPerson.toFixed(2);
 
   resetButton.removeAttribute("disabled");
 };
@@ -65,12 +60,6 @@ const handleCustomTip = () => {
   });
 
   selectedTip = Number(customTipInput.value);
-
-  // varianta 1 pentru preluare buton selectat
-  // const selectedTipButton = document.querySelector(".selected-tip");
-  // if (selectedTipButton !== null) {
-  //   selectedTipButton.classList.remove("selected-tip");
-  // }
 };
 
 customTipInput.addEventListener("input", handleCustomTip);
@@ -84,6 +73,3 @@ const handleResetForm = () => {
 };
 
 resetButton.addEventListener("click", handleResetForm);
-
-// Tema:
-// - daca selectezi un buton de tip, inputul custom trebuie sa fie golit

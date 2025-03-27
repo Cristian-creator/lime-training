@@ -111,6 +111,11 @@ section {
     margin-right: auto;
 }
 
+.tip-buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .tip-button {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -124,7 +129,9 @@ section {
 }
 
 /* --- Reset Button --- */
-.reset-button {
+.reset-button, .calculate-button {
+    border: none;
+    cursor: pointer;
     background-color: var(--green-400);
     color: var(--green-900);
     width: 100%;
@@ -149,4 +156,21 @@ section {
 
 .history-table {
     display: none;
+}
+
+@media (min-width: 768px) {
+    .calculator-container {
+        display: flex;
+        gap: 32px;
+        border-radius: 25px;
+    }
+    .calculator-container form {
+        flex: 1;
+    }
+    .tip-buttons-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .results-container {
+        flex: 1;
+    }
 }

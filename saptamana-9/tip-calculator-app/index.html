@@ -38,19 +38,19 @@
 
           <!-- Tip field -->
           <label class="standard-label" for="tip">Select Tip %</label>
-          <div>
+          <div class="tip-buttons-container">
             <button class="tip-button" type="button" value="5">5%</button>
             <button class="tip-button" type="button" value="10">10%</button>
             <button class="tip-button" type="button" value="15">15%</button>
             <button class="tip-button" type="button" value="25">25%</button>
             <button class="tip-button" type="button" value="50">50%</button>
+            <input
+              id="tip"
+              type="number"
+              class="standard-input custom-tip-input"
+              placeholder="Custom"
+              name="custom-tip" />
           </div>
-          <input
-            id="tip"
-            type="number"
-            class="standard-input custom-tip-input"
-            placeholder="Custom"
-            name="custom-tip" />
 
           <!-- Number of people field -->
           <label class="standard-label" for="number-of-people"
@@ -66,7 +66,7 @@
           </div>
 
           <!-- Calculate -->
-          <button type="submit">Calculate</button>
+          <button type="submit" class="calculate-button">Calculate</button>
         </form>
         <div class="results-container">
           <!-- First row -->
