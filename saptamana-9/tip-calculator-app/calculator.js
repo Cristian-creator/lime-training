@@ -6,72 +6,7 @@ const numberOfPeopleInputError = document.querySelector(
 );
 const totalPerPersonElement = document.querySelector(".total-per-person");
 
-// History
-const historyNotAvailableMessage = document.querySelector(
-  ".history-not-available"
-);
-const historyTable = document.querySelector(".history-table");
-const historyTableBody = historyTable.querySelector("tbody");
-
-// Statistics
-const averageBillElement = document.querySelector(".average-bill");
-
 let selectedTip;
-let history = [];
-
-const getFormattedDate = () => {
-  const currentDate = new Date();
-  const formattedDate = new Intl.DateTimeFormat("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(currentDate);
-
-  return formattedDate;
-};
-
-const createHistoryRow = (amount, numberOfPeople) => {
-  const newHistoryElement = document.createElement("tr");
-  newHistoryElement.innerHTML = `
-    <td>${amount}</td>
-    <td>${selectedTip}</td>
-    <td>${numberOfPeople}</td>
-    <td>${getFormattedDate()}</td>
-    <td>
-      <button class="delete-button">
-        <img src="./assets/delete.svg" />
-      </button>
-    </td>
-  `;
-  historyTableBody.appendChild(newHistoryElement);
-
-  // delete button
-  const deleteButton = newHistoryElement.querySelector(".delete-button");
-
-  const handleDeleteHistoryRow = () => {
-    const userConfirmed = confirm("Are you sure? This action is irreversible.");
-
-    if (userConfirmed === true) {
-      historyTableBody.removeChild(newHistoryElement);
-    }
-  };
-
-  deleteButton.addEventListener("click", handleDeleteHistoryRow);
-};
-
-const updateAverageBill = () => {
-  let sum = 0;
-
-  for (let i = 0; i < history.length; i++) {
-    sum += history[i].bill;
-  }
-
-  const average = sum / history.length;
-
-  averageBillElement.innerText = "$" + average.toFixed(2);
-};
 
 const handleFormSubmit = (e) => {
   e.preventDefault();
@@ -112,18 +47,14 @@ const handleFormSubmit = (e) => {
   resetButton.removeAttribute("disabled");
 
   // history
-  historyNotAvailableMessage.classList.add("hide");
-  historyTable.classList.remove("hide");
-
-  createHistoryRow(amount, numberOfPeople);
-
+  displayHistoryTable();
   history.push({
+    id: generateHistoryId(),
     bill: amount,
     tip: selectedTip,
     numberOfPeople: numberOfPeople,
   });
-
-  console.log(history);
+  createHistoryRow();
 
   // statistics
   updateAverageBill();
@@ -161,11 +92,28 @@ const handleCustomTip = () => {
 customTipInput.addEventListener("input", handleCustomTip);
 
 // --- Reset Button ---
+// next: vezi din nou inregistrarea -> fa modificari in cod si vezi ce se intampla
+// 1. se salveaza in memorie resetButton
 const resetButton = document.querySelector(".reset-button");
-const amountInput = document.querySelector();
+const amountInput = document.querySelector(".amount-input");
 
+// 2. se salveaza in memorie handleResetForm
 const handleResetForm = () => {
   amountInput.value = "";
+
+  test();
 };
 
+// 3. Se cauta in memorie resetButton si handleResetForm
 resetButton.addEventListener("click", handleResetForm);
+
+// 4. Se salveaza in memorie test
+const test = () => {
+  console.log("TEST..........");
+};
+
+// 5. Se da click pe resetButton
+
+// 6. Se executa handleResetForm
+
+// 7. Se cauta in memorie test si se executa
