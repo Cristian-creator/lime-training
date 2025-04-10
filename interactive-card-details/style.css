@@ -12,3 +12,117 @@
     --linear-gradient-active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
     --red: hsl(0, 100%, 66%);
 }
+
+.cards-container {
+    background-image: url('./images/bg-main-mobile.png');
+    height: 240px;
+    margin-bottom: 68px;
+    position: relative;
+}
+
+.card-back {
+    position: absolute;
+    right: 16px;
+    top: 32px;
+    background-image: url('./images/bg-card-back.png');
+    background-size: cover;
+    width: 286px;
+    height: 157px;
+}
+
+.card-back-cvv {
+    position: absolute;
+    right: 40px;
+    top: 69px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 1.29px;
+}
+
+.card-front {
+    position: absolute;
+    top: 126px;
+    left: 16px;
+    background-image: url('./images/bg-card-front.png');
+    background-size: cover;
+    width: 285px;
+    height: 156.21px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.card-front-logo {
+    width: 54px;
+}
+
+.card-number {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 2.2px;
+    margin-top: 37px;
+}
+
+.card-name-container {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    font-size: 12px;
+    letter-spacing: 1.29px;
+}
+
+/* --- Form Container --- */
+.form-container {
+    padding: 24px;
+}
+
+.card-data-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.standard-label {
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.standard-input {
+    border-color: var(--light-grayish-violet);
+    border-width: 1px;
+    border-style: solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: var(--very-dark-violet);
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-data-form button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--very-dark-violet);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+}
