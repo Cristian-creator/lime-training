@@ -2,13 +2,11 @@
 const nameInput = document.querySelector("#name");
 const cardName = document.querySelector(".card-name");
 
-// Erori:
-// - "This field is required" daca nu s a completat nimic la submit
-// - "Must contain only letters" daca include cifre sau alte caractere
-// - "Maximum number of characters is 256" daca include peste 256 caractere
-
 const handleNameInputChange = () => {
   cardName.innerText = nameInput.value;
+  if (formIsSubmitted === true) {
+    validateCardName(nameInput.value);
+  }
 };
 
 nameInput.addEventListener("input", handleNameInputChange);
@@ -44,3 +42,22 @@ const handleNumberInputChange = () => {
 };
 
 numberInput.addEventListener("input", handleNumberInputChange);
+
+// --- Expiration Date ---
+const expirationMonthInput = document.querySelector(
+  '[name="card-expiration-month"]'
+);
+const expirationYearInput = document.querySelector(
+  '[name="card-expiration-year"]'
+);
+
+const handleExpirationMonthInputChange = () => {
+  if (expirationMonthInput.value.length === 2) {
+    expirationYearInput.focus();
+  }
+};
+
+expirationMonthInput.addEventListener(
+  "input",
+  handleExpirationMonthInputChange
+);

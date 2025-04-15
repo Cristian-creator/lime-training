@@ -42,7 +42,7 @@
               class="standard-input"
               type="text"
               placeholder="e.g. Jane Appleseed" />
-            <p class="standard-input-error"></p>
+            <p class="standard-input-error name-input-error hide"></p>
           </div>
           <!-- Number -->
           <div>
@@ -55,11 +55,33 @@
               placeholder="e.g. 1234 5678 9123 0000" />
             <p class="standard-input-error"></p>
           </div>
+          <!-- Expiration Date -->
+          <div>
+            <label for="card-expiration-date" class="standard-label"
+              >Exp. Date (MM/YY)</label
+            >
+            <div class="card-expiration-date-inputs">
+              <input
+                id="card-expiration-date"
+                name="card-expiration-month"
+                class="standard-input"
+                type="number"
+                placeholder="MM" />
+              <input
+                id="card-expiration-date"
+                name="card-expiration-year"
+                class="standard-input"
+                type="number"
+                placeholder="YY" />
+            </div>
+            <p class="standard-input-error"></p>
+          </div>
           <!-- Confirm Button -->
           <button type="submit">Confirm</button>
         </form>
       </div>
     </header>
-    <script src="./script.js"></script>
+    <script src="./input-handlers.js"></script>
+    <script src="./form-submit.js"></script>
   </body>
 </html>

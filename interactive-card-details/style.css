@@ -13,6 +13,10 @@
     --red: hsl(0, 100%, 66%);
 }
 
+.hide {
+    display: none;
+}
+
 .cards-container {
     background-image: url('./images/bg-main-mobile.png');
     height: 240px;
@@ -59,6 +63,10 @@
     width: 54px;
 }
 
+.card-name {
+    text-transform: uppercase;
+}
+
 .card-number {
     font-size: 18px;
     font-weight: 500;
@@ -74,6 +82,11 @@
     color: var(--white);
     font-size: 12px;
     letter-spacing: 1.29px;
+}
+
+.card-expiration-date-inputs {
+    display: flex;
+    gap: 10px;
 }
 
 /* --- Form Container --- */
@@ -111,6 +124,17 @@
     box-sizing: border-box;
     font-size: 18px;
     font-weight: 500;
+}
+
+.standard-input.has-error {
+    border-color: var(--red);
+}
+
+.standard-input-error {
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 8px;
 }
 
 .card-data-form button[type="submit"] {
