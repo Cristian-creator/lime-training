@@ -14,7 +14,7 @@
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .cards-container {
@@ -98,6 +98,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
 }
 
 .standard-label {
@@ -149,4 +152,45 @@
     cursor: pointer;
     border: none;
     margin-top: 8px;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+button:disabled {
+    background-color: var(--dark-grayish-violet) !important;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 4px solid;
+    border-color: #dbdcef;
+    border-right-color: var(--very-dark-violet);
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+ 
+@keyframes spin {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+       transform: rotate(1turn);
+    }
+}
+
+.second-step-container {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+}
+
+.second-step-container:not(.hide) {
+    opacity: 1;
 }

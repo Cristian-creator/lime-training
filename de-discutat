@@ -1,3 +1,7 @@
 - var ( in contextul-ul conceputlui de scope )
 - cand folosim 2 de egal
 - de ce 256 la validari
+- de ce daca modifici o proprietate de CSS din javascript uneori trebuie sa pui ghilimele
+  alteori nu.
+- suitci
+- cum faci componentele in viatza de zi cu zi

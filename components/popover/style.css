@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.popover-content {
+    width: 400px;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 4px;
+    z-index: 60;
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 50;
+}

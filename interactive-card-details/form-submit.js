@@ -1,5 +1,10 @@
 const cardForm = document.querySelector(".card-data-form");
+const stepTwoContainer = document.querySelector(".second-step-container");
 const nameInputError = document.querySelector(".name-input-error");
+const submitButton = document.querySelector(
+  '.card-data-form button[type="submit"]'
+);
+const cardFormSpinner = document.querySelector(".card-form-spinner");
 
 const forbiddenCharactersForName = [
   "1",
@@ -22,10 +27,32 @@ const handleCardFormSubmit = (e) => {
   e.preventDefault();
 
   formIsSubmitted = true;
+  numberOfErrors = 0;
 
   const formData = new FormData(e.target);
 
   validateCardName(formData.get("name"));
+  // ...
+
+  if (numberOfErrors === 0) {
+    submitButton.setAttribute("disabled", "true");
+    cardFormSpinner.classList.remove("hide");
+
+    setTimeout(() => {
+      // daca ai vrea sa revii la statusul anterior
+      // submitButton.removeAttribute("disabled");
+      // cardFormSpinner.classList.add("hide");
+
+      // trecere pe pasul 2
+      cardForm.style.opacity = "0%";
+
+      setTimeout(() => {
+        cardForm.classList.add("hide");
+        stepTwoContainer.classList.remove("hide");
+        // stepTwoContainer.style.opacity = "100%";
+      }, 1000);
+    }, 2000);
+  }
 };
 
 cardForm.addEventListener("submit", handleCardFormSubmit);

@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    display: none;
+    position: absolute;
+    bottom: -28px;
+    left: -12px;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 13px;
+    z-index: 100;
+}
+
+.tooltip-wrapper:focus .tooltip-text {
+    display: inline;
+}
+
+@media (min-width: 1024px) {
+    .tooltip-wrapper:hover .tooltip-text {
+        display: inline;
+    }
+}
