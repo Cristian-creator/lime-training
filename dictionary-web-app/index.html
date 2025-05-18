@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section>
+      <!-- pe div pui o clasa, iar pe clasa aia pui position: relative; -->
+      <form class="search-word-form">
+        <input
+          class="search-word-input"
+          type="text"
+          placeholder="Search for any word…"
+          name="keyword" />
+        <!-- pe iconita cu lupa pui o clasa, iar pe clasa aia pui position: absolute; -->
+        <button class="search-word-button">
+          <img src="./images/icon-search.svg" class="search-icon" />
+          <div class="spinner hide search-word-spinner"></div>
+        </button>
+      </form>
+    </section>
+
+    <section class="results-container">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+      odio?
+    </section>
+
+    <section class="word-not-found hide">
+      <p>😕</p>
+      <h3>No Definitions Found</h3>
+      <p>
+        Sorry pal, we couldn't find definitions for the word you were looking
+        for. You can try the search again at later time or head to the web
+        instead.
+      </p>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

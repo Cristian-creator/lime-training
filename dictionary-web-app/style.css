@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: var(--text-primary);
+}
+
+:root {
+    --background-primary: #FFFFFF;
+    --background-surface: #F4F4F4;
+
+    --text-primary: #2D2D2D;
+}
+
+/* --- Common --- */
+.hide {
+    display: none;
+}
+
+.spinner {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   border: 9px solid;
+   border-color: #dbdcef;
+   border-right-color: #474bff;
+   animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+   to {
+      transform: rotate(1turn);
+   }
+}
+
+body {
+    background-color: var(--background-primary);
+    font-family: Arial;
+}
+
+.dark-theme {
+    --background-primary: #050505;
+
+    --text-primary: #FFFFFF;
+}
+
+.font-serif {
+    /* font-family: ; */
+}
+
