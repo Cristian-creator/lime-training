@@ -1,0 +1,8 @@
+Deschide VS Code-ul in folderul mare lime-training.
+Creeaza folderul react daca nu este deja
+Deschizi terminalul din VS Code ( nu uita sa alegi optiunea Command Prompt )
+cd react
+npm create vite@latest first-react-app -- --template react
+cd first-react-app
+npm install
+npm run dev

@@ -1,0 +1,5 @@
+Deschide VS Code-ul in folderul mare lime-training.
+Deschizi terminalul din VS Code ( nu uita sa alegi optiunea Command Prompt )
+cd react
+cd first-react-app
+npm run dev
