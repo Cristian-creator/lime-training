@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.spinner {
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   border: 3.8px solid;
+   border-color: #dbdcef;
+   border-right-color: #474bff;
+   animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+   to {
+      transform: rotate(1turn);
+   }
+}
