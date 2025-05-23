@@ -25,12 +25,23 @@ const App = () => {
     setCounter(newCounter);
   };
 
+  let secondCounter = 0;
+
+  const handleIncreaseSecond = () => {
+    secondCounter++;
+    console.log(secondCounter);
+  };
+
+  console.log("test....................................");
+
   // JSX
   return (
     <div>
       <h3>Current counter is {counter}</h3>
       <button onClick={handleIncrease}>Increase count</button>
       <button onClick={handleDecrease}>Decrease count</button>
+      <h3>Second counter is {secondCounter}</h3>
+      <button onClick={handleIncreaseSecond}>Increase count</button>
     </div>
   );
 };
