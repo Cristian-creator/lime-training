@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.todo-is-completed {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.todo-container button {
+  display: none;
+}
+
+.todo-container:hover button {
+  display: inline-block;
+}
