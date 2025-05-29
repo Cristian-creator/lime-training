@@ -17,3 +17,7 @@
 .todo-container:hover button {
   display: inline-block;
 }
+
+.selected-filter {
+  color: blue;
+}
