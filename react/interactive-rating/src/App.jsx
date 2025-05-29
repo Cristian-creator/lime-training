@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 
+const numbers = [1, 2, 3, 4, 5];
+
 const App = () => {
   let [selectedRate, setSelectedRate] = useState(0);
   let [hasCompletedStepOne, setHasCompletedStepOne] = useState(false);
-  const numbers = [1, 2, 3, 4, 5];
 
   const handleClick = (e) => {
     const newSelectedRate = Number(e.target.innerText);
