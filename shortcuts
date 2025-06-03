@@ -2,3 +2,4 @@ CTRL + B - inchide/deschide bara din stanga
 CTRL + / - adauga un comentariu sau comenteaza o linie
 TAB - duci un element de HTML un tab la dreapta
 SHIFT + TAB - duci un element de HTML un tab la stanga
+SHIFT + ALT + O - sterge importurile useless
