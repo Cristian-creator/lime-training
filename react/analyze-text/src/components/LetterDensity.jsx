@@ -1,3 +1,57 @@
+import { useState } from "react";
+import chevronDown from "../assets/chevron-down.svg";
+import chevronUp from "../assets/chevron-up.svg";
+
+const LetterDensity = ({ text }) => {
+  let [showMore, setShowMore] = useState(false);
+  const lettersReport = getLettersReport(text);
+
+  const handleShowMore = () => {
+    setShowMore(true);
+  };
+
+  const handleShowLess = () => {
+    setShowMore(false);
+  };
+
+  console.log(lettersReport);
+
+  return (
+    <div>
+      <h2>Letter Density</h2>
+      {text.length === 0 ? (
+        <p>No characters found. Start typing to see letter density.</p>
+      ) : (
+        lettersReport.map((letterData, index) => {
+          if (showMore === false && index >= 5) return null;
+
+          return (
+            <div>
+              <p>{letterData.letter}</p>
+              <progress value={letterData.percentage} max="100" />
+              <p>
+                {letterData.numberOfOccurences} ({letterData.percentage}%)
+              </p>
+            </div>
+          );
+        })
+      )}
+      {lettersReport.length >= 6 && showMore === false ? (
+        <button onClick={handleShowMore}>
+          Show more <img src={chevronDown} />
+        </button>
+      ) : null}
+      {showMore === true ? (
+        <button onClick={handleShowLess}>
+          Show less <img src={chevronUp} />
+        </button>
+      ) : null}
+    </div>
+  );
+};
+
+export default LetterDensity;
+
 // Creeaza o functie care primeste ca parametru un string.
 // Functia sa returneze un array de forma celui de mai jos
 // ex: "Lorem ipsum dolor"
@@ -49,26 +103,3 @@ const getLettersReport = (text) => {
   // 4. returneaza al doilea array
   return result;
 };
-
-const LetterDensity = ({ text }) => {
-  return (
-    <div>
-      <h2>Letter Density</h2>
-      {text.length === 0 ? (
-        <p>No characters found. Start typing to see letter density.</p>
-      ) : (
-        getLettersReport(text).map((letterData) => (
-          <div>
-            <p>{letterData.letter}</p>
-            <progress value={letterData.percentage} max="100" />
-            <p>
-              {letterData.numberOfOccurences} ({letterData.percentage}%)
-            </p>
-          </div>
-        ))
-      )}
-    </div>
-  );
-};
-
-export default LetterDensity;
