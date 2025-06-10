@@ -11,3 +11,4 @@
 - essentials ( tehnologii de care ai nevoie pe FE - iconite, routing, stylings )
 - merge si fara === true? excludeSpaces === true
 - de ce trebuie sa importam iconitele & imaginile
+- batching
