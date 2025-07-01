@@ -4,10 +4,10 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { generateProductSlug } from "@/lib/generateProductSlug";
 import { isMobile } from "@/lib/is-mobile";
 import {
   handleFacebookShare,
@@ -23,8 +23,19 @@ const shareData = {
   url: "https://developer.mozilla.org",
 };
 
-const ShareProductButton = () => {
+interface ShareProductButtonProps {
+  id: number;
+  name: string;
+}
+
+const ShareProductButton: React.FC<ShareProductButtonProps> = ({
+  id,
+  name,
+}) => {
   let [isOpen, setIsOpen] = useState(false);
+
+  const productPageURL =
+    window.location.origin + "/products/" + generateProductSlug(name, id); // "http://localhost:5173/products/iphone-14-pro"
 
   const handleShare = async () => {
     const deviceIsMobile = isMobile();
@@ -56,11 +67,7 @@ const ShareProductButton = () => {
             <Label htmlFor="link" className="sr-only">
               Link
             </Label>
-            <Input
-              id="link"
-              defaultValue="https://ui.shadcn.com/docs/installation"
-              readOnly
-            />
+            <Input id="link" defaultValue={productPageURL} readOnly />
           </div>
           <div className="flex items-center gap-2">
             <hr className="flex-1" />
@@ -68,13 +75,23 @@ const ShareProductButton = () => {
             <hr className="flex-1" />
           </div>
           <div className="flex justify-center gap-2">
-            <Button variant="ghost" onClick={() => handleFacebookShare("")}>
+            <Button
+              variant="ghost"
+              onClick={() => handleFacebookShare(productPageURL)}>
               <Facebook />
             </Button>
-            <Button variant="ghost" onClick={() => handleWhatsAppShare("")}>
+            <Button
+              variant="ghost"
+              onClick={() =>
+                handleWhatsAppShare(productPageURL, shareData.text)
+              }>
               <img src="" />
             </Button>
-            <Button variant="ghost" onClick={() => handleTwitterShare("", "")}>
+            <Button
+              variant="ghost"
+              onClick={() =>
+                handleTwitterShare(productPageURL, shareData.text)
+              }>
               <img src="" />
             </Button>
           </div>
