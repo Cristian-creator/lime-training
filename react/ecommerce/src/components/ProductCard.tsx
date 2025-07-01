@@ -1,16 +1,16 @@
-import { Product } from "@/types/products";
-import React from "react";
 import {
   Card,
   CardAction,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Product } from "@/types/products";
+import { ShoppingCart } from "lucide-react";
+import React from "react";
 import { Button } from "./ui/button";
-import { Share, ShoppingCart } from "lucide-react";
+import ShareProductButton from "./ShareProductButton";
 
 interface ProductCardProps {
   product: Product;
@@ -22,9 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <CardHeader>
         <CardTitle>{product.name}</CardTitle>
         <CardAction>
-          <Button variant="secondary" size="icon">
-            <Share />
-          </Button>
+          <ShareProductButton />
         </CardAction>
       </CardHeader>
       <CardContent>
